@@ -1,0 +1,101 @@
+/* --- Conteneur principal (Grille) --- */
+.joueurs-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Grille adaptative */
+    gap: 30px; /* Espace entre les cartes */
+    padding: 30px;
+}
+
+/* --- La Carte Joueur (Premium) --- */
+.joueur-card-premium {
+    background: #ffffff;
+    border-radius: 12px; /* Coins plus arrondis */
+    overflow: hidden;
+    /* Ombre portée douce pour la profondeur */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Effet de transition fluide */
+    border: 1px solid #f0f0f0; /* Une bordure très fine pour le contour */
+    display: flex;
+    flex-direction: column; /* Aligne le contenu verticalement */
+    height: 100%; /* Pour que toutes les cartes aient la même hauteur */
+}
+
+/* --- Effet au Survol (Hover) --- */
+.joueur-card-premium:hover {
+    transform: translateY(-8px); /* La carte monte légèrement */
+    box-shadow: 0 10px 20px rgba(0, 43, 92, 0.15); /* L'ombre devient plus forte */
+}
+
+/* --- En-tête de Carte (Classement) --- */
+.card-header-premium {
+    background-color: #002b5c; /* Ta couleur bleu foncé */
+    padding: 15px;
+    text-align: center;
+}
+
+.rank-badge-premium {
+    color: #ffffff;
+    font-size: 1.6rem;
+    font-weight: 800; /* Très gras */
+    letter-spacing: 1px;
+}
+
+/* Centre le contenu et évite que ça déborde */
+.card-body-premium {
+    padding: 15px; /* Réduit un peu le padding */
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100px; /* Force une zone de texte constante */
+}
+
+.player-name-premium {
+    margin: 0;
+    font-size: 1.4rem; /* Réduit un peu la taille si le nom est long */
+    color: #333;
+    line-height: 1.2;
+    text-align: center;
+}
+
+.player-name-premium .firstname {
+    display: block;
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 5px;
+    text-transform: none;
+    font-weight: 400;
+}
+
+/* --- Pied de Carte (Bouton) --- */
+.card-footer-premium {
+    padding: 0 20px 25px 20px;
+    text-align: center;
+}
+
+/* --- Le Bouton Voir le profil (Modernisé) --- */
+.btn-profil-premium {
+    display: inline-block;
+    padding: 10px 25px;
+    background-color: #002b5c;
+    color: white;
+    text-decoration: none;
+    border-radius: 50px; /* Bouton "pilule" */
+    font-weight: bold;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    border: 2px solid transparent; /* Prépare la bordure pour le hover */
+}
+
+.btn-profil-premium:hover {
+    background-color: #ffffff;
+    color: #002b5c;
+    border-color: #002b5c; /* Inverse les couleurs au hover */
+    transform: scale(1.05); /* Le bouton grossit très légèrement */
+}
+
+.card-footer-premium {
+    padding-bottom: 20px;
+    margin-top: auto; /* Pousse le bouton tout en bas de la carte */
+}

@@ -1,0 +1,39 @@
+/* Centrer le titre */
+h1 {
+    text-align: center;
+    color: #002b5c;
+    margin-bottom: 30px;
+}
+
+/* Conteneur des cartes (Grille) */
+.tournois-grid { /* Garde ce nom si c'est celui dans ta vue */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centre les cartes horizontalement */
+    gap: 30px;
+    padding: 20px;
+}
+
+/* Style des cartes de tournoi */
+.tournoi-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 20px;
+    width: 250px;
+    text-align: center;
+    border-left: 5px solid #002b5c; /* La petite barre bleue sur le côté */
+    transition: transform 0.3s ease;
+}
+
+.tournoi-card:hover {
+    transform: translateY(-10px); /* Petit effet au survol */
+}
+
+/* Style pour le lieu (PARIS/LONDRES) */
+.nat {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #666;
+    font-size: 0.9em;
+}
