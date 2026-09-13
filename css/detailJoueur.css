@@ -11,8 +11,6 @@
 .profile-header {
     text-align: center;
     border-bottom: 2px solid #002b5c;
-    padding-bottom: 20px;
-    margin-bottom: 30px;
 }
 
 .rank-badge {
@@ -36,11 +34,23 @@
     font-style: italic;
 }
 
-.brand-tag-mini {
-    text-align: center;
+.header-brands {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap : 20px;
     border-bottom: 2px solid #002b5c;
     padding-bottom: 20px;
-    margin-bottom: 30px;
+}
+
+.header-brands h2 {
+    flex-basis: 100%;   /* le titre reste seul sur sa ligne */
+    text-align: center;
+    margin-bottom: 0px;
+}
+
+.brand-tag-mini {
+    text-align: center;
 }
 
 .brand-type-mini {
@@ -70,7 +80,7 @@
 
 .staff-section h2 {
     border-bottom: 1px solid #ddd;
-    padding-bottom: 10px;
+    padding-bottom: 20px;
     color: #002b5c;
 }
 
