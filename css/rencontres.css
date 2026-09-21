@@ -26,8 +26,8 @@
 
 .match-body {
     padding: 20px;
-    padding-left: 100px;
-    padding-right: 105px;
+    padding-left: 110px;
+    padding-right: 110px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -38,17 +38,27 @@
 .vs { 
     color: #bbb; 
     font-weight: normal; 
-    padding-right: 22px;
+    padding-right: 10px;
     font-size: 0.8em;
 }
 
-/* Style pour mettre en valeur le gagnant */
+/* Style pour le gagnant de la rencontre */
 .winner { 
     color: #04391a; 
 }
 .winner::after { 
     content: "✓"; 
     color: #27ae60;
+    font-size: 0.9em;
+}
+
+/* Style pour le perdant de la rencontre */
+.loser { 
+    color: #390404; 
+}
+.loser::after { 
+    content: "✗"; 
+    color: #ae2727;
     font-size: 0.9em;
 }
 
