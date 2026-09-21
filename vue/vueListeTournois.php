@@ -1,4 +1,4 @@
-<h1>Tournois ATP</h1>
+<h1>Tournois du Grand Chelems</h1>
 
 <div class="tournois-grid">
     <?php foreach ($tournois as $t): ?>
