@@ -1,4 +1,4 @@
-# P_Tennis_MVC — T-L Tour
+# Projet Tennis MVC - Site T-L Tour
 
 Site web PHP (architecture MVC « maison », sans framework) présentant un circuit de tennis fictif : classement des joueurs, profils détaillés (staff, sponsors), résultats des rencontres, calendrier des tournois et galerie photos.
 
