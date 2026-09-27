@@ -1,5 +1,11 @@
 <?php
 
+include_once "$racine/modele/bd.galerie.inc.php";
+
+$db = connexionPDO();
+$galerieModel = new GalerieModel($db);
+$photos = $galerieModel->getPhotos();
+
 $titre = "Galerie Photos";
 $style = "galerie"; // On prévoit déjà le CSS spécifique
 
