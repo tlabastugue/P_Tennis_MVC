@@ -4,7 +4,7 @@
     <?php foreach ($photos as $photo): ?>
         <div class="photo-card">
             <img src="<?= htmlspecialchars($photo['Chemin_Photo']) ?>" alt="<?= htmlspecialchars($photo['Legende_Photo'] ?? '') ?>">
-            <p><?= htmlspecialchars($photo['Legende_Photo'] ?? '') ?></p>
+            <p class="legende"><?=htmlspecialchars($photo['Legende_Photo'] ?? '') ?></p>
         </div>
     <?php endforeach; ?>
 </div>
