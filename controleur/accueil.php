@@ -1,7 +1,7 @@
 <?php
 
 $titre = "Bienvenue sur le T-L Tour";
-$style = "style"; // Utilise juste le CSS général
+$style = "style";
 
 include "$racine/vue/entete.html.php";
 echo "<h1>Bienvenue sur le site du T-L Tour, les matchs du circuit ATP</h1>";

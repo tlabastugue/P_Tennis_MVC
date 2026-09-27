@@ -1,9 +1,7 @@
-/* Liste des matchs */
 .match-list {
     margin-top: 20px;
 }
 
-/* Card style Scoreboard */
 .match-card {
     background: white;
     border: 1px solid #ddd;
@@ -40,7 +38,6 @@
     font-size: 0.8em;
 }
 
-/* Style pour le gagnant de la rencontre */
 .winner { 
     color: #04391a; 
 }
@@ -50,7 +47,6 @@
     font-size: 0.9em;
 }
 
-/* Style pour le perdant de la rencontre */
 .loser { 
     color: #390404; 
 }

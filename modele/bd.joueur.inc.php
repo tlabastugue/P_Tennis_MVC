@@ -29,7 +29,8 @@ class JoueurModel {
     public function getMarquesByJoueur($id) {
         $sql = "SELECT m.* FROM Marque m 
                 JOIN Sponsor s ON m.Id_Marque = s.Id_Marque 
-                WHERE s.Id_Joueur = :id";
+                WHERE s.Id_Joueur = :id
+                ORDER BY m.Type_Marque DESC";
         $query = $this->db->prepare($sql);
         $query->bindValue(':id', $id, PDO::PARAM_INT);
         $query->execute();

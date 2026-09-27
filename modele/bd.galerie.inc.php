@@ -9,7 +9,6 @@ class GalerieModel {
     }
 
     public function getPhotos() {
-        // Supposons que tu as une table 'Galerie'
         $query = $this->db->prepare("SELECT * FROM Galerie");
         $query->execute();
         return $query->fetchAll(PDO::FETCH_ASSOC);

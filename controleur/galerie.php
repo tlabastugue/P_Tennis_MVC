@@ -7,7 +7,7 @@ $galerieModel = new GalerieModel($db);
 $photos = $galerieModel->getPhotos();
 
 $titre = "Galerie Photos";
-$style = "galerie"; // On prévoit déjà le CSS spécifique
+$style = "galerie";
 
 include "$racine/vue/entete.html.php";
 include "$racine/vue/vueGalerie.php";

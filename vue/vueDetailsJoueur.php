@@ -23,9 +23,18 @@
                 <div class="staff-list">
                     <?php if (!empty($leStaff)): ?>
                         <?php foreach ($leStaff as $s): ?>
+                            <?php
+                            $prenoms = explode('|', $s['Prenom_Staff'] ?? '');
+                            $noms = explode('|', $s['Nom_Staff'] ?? '');
+                            $personnes = [];
+                            foreach ($prenoms as $i => $prenom) {
+                                $personnes[] = trim($prenom . ' ' . ($noms[$i] ?? ''));
+                            }
+                            $nomStaff = implode(' | ', array_filter($personnes));
+                            ?>
                             <div class="staff-card">
-                                <strong><?= htmlspecialchars($s['Prenom_Staff']) ?> <?= htmlspecialchars($s['Nom_Staff']) ?></strong>
-                                <span><?= htmlspecialchars($s['Fonction_Staff']) ?></span>
+                                <strong><?= htmlspecialchars($nomStaff !== '' ? $nomStaff : 'Aucun') ?></strong>
+                                <span><?= htmlspecialchars($s['Fonction_Staff'] ?? '') ?></span>
                             </div>
                         <?php endforeach; ?>
                     <?php else: ?>
