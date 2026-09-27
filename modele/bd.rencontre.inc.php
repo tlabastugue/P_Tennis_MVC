@@ -17,7 +17,8 @@ class RencontreModel {
                 FROM Rencontre r
                 INNER JOIN Joueur j1 ON r.Id_Joueur_1 = j1.Id_Joueur
                 INNER JOIN Joueur j2 ON r.Id_Joueur_2 = j2.Id_Joueur
-                INNER JOIN Tournoi t ON r.Id_Tournoi = t.Id_Tournoi";
+                INNER JOIN Tournoi t ON r.Id_Tournoi = t.Id_Tournoi
+                ORDER BY r.Id_Rencontre";
         
         $query = $this->db->prepare($sql);
         $query->execute();

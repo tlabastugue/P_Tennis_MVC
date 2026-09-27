@@ -26,10 +26,9 @@
 
 .match-body {
     padding: 20px;
-    padding-left: 110px;
-    padding-right: 110px;
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr; 
+    justify-items: center;
     align-items: center;
     font-weight: bold;
     font-size: 1.1em;
@@ -37,8 +36,7 @@
 
 .vs { 
     color: #bbb; 
-    font-weight: normal; 
-    padding-right: 10px;
+    font-weight: normal;
     font-size: 0.8em;
 }
 
