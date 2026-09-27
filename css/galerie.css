@@ -1,4 +1,3 @@
-/* Page galerie plus large que les autres (1100px dans style.css) */
 #contenu {
     max-width: 1500px;
 }
@@ -7,15 +6,12 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: flex-start; /* chaque carte garde sa propre hauteur */
-    gap: 15px;
-    padding: 20px;
+    align-items: flex-start;
+    gap: 20px;
 }
 
 .photo-card {
-    /* 5 cartes par ligne quelle que soit la taille de l'écran : 4 espaces de 15px entre elles */
-    width: calc((100% - 4 * 15px) / 5);
-    box-sizing: border-box; /* la bordure est comprise dans la largeur */
+    width: 260px;
     border: 1px solid #ddd;
     border-radius: 8px;
     overflow: hidden;
@@ -26,8 +22,12 @@
 .photo-card img {
     display: block;
     width: 100%;
-    aspect-ratio: 4 / 3; /* la hauteur suit la largeur de la carte */
+    height: 200px;
     object-fit: cover;
+}
+
+.photo-card img[src*="Boisson"] {
+    object-position: top;
 }
 
 .photo-card .legende {
